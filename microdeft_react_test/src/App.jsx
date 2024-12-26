@@ -1,8 +1,11 @@
 import React from 'react'
+import Registration from './Pages/Registration'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Registration/>
+    </div>
   )
 }
 
