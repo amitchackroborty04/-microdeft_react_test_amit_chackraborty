@@ -89,6 +89,9 @@ const Login = () => {
               </span>
             </Link>
           </p>
+          <Link to ="/coursefrom">
+          <p className="text-xl font-medium text-red-500 text-center mt-7 hover:underline capitalize cursor-pointer">course From</p>
+          </Link>
         </div>
       </Container>
     </section>
