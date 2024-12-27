@@ -1,6 +1,6 @@
-
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
 const CourseForm = () => {
@@ -13,11 +13,8 @@ const CourseForm = () => {
   const handleCreate = async (e) => {
     e.preventDefault();
 
- 
     const token = localStorage.getItem("token");
-   
 
-    
     const data = {
       title,
       description,
@@ -38,17 +35,17 @@ const CourseForm = () => {
         }
       );
 
-      console.log(response.data.status_message); 
-       toast(response.data.status_message, {
-                position: "top-right",
-                autoClose: 1000,
-                hideProgressBar: false,
-                closeOnClick: false,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-              });
+      console.log(response.data.status_message);
+      toast(response.data.status_message, {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } catch (error) {
       console.error(
         "Failed:",
@@ -68,19 +65,19 @@ const CourseForm = () => {
   };
 
   return (
-    <div className="border rounded-xl shadow-2xl bg-red-200 mt-[50px] w-[60%] mx-auto pb-10 text-center ">
-       <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick={false}
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
+    <div className="border rounded-xl shadow-2xl bg-red-200 mt-[50px] w-[60%] mx-auto pb-5 text-center ">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <h2 className="text-2xl font-bold text-[#1b5fe8] font-serif text-center pt-7 uppercase">
         Wellc<span className="text-red-600">o</span>me
       </h2>
@@ -144,6 +141,12 @@ const CourseForm = () => {
           Create
         </button>
       </form>
+      <Link to="/featchdata">
+        <p className="text-xl font-medium text-red-500 text-center mt-4 hover:underline capitalize cursor-pointer">
+          {" "}
+          Fetch Data
+        </p>
+      </Link>
     </div>
   );
 };

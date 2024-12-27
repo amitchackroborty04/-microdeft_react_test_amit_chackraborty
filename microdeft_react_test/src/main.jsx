@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from './Pages/Login.jsx'
 
 import CourseFrom from './Pages/CourseFrom.jsx'
+import Fetch_data from './Pages/Fetch_data.jsx'
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: '/coursefrom',
     element: <CourseFrom/>,
+  },
+  {
+    path: '/featchdata',
+    element: <Fetch_data/>,
   },
  
 ])
